@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lpc"
-version = "1.0.0-1"
+version = "1.0.0-2"
 -- LuaDist source
 source = {
-  tag = "1.0.0-1",
+  tag = "1.0.0-2",
   url = "git://github.com/LuaDist-testing/lpc.git"
 }
 -- Original source
@@ -28,7 +28,7 @@ build = {
    type = "make",
    build_variables = {
       LDFLAGS = "$(LIBFLAG)",
-      LUA_PREFIX = "$(LUA_DIR)"
+      CFLAGS = "$(CFLAGS) -I$(LUA_INCDIR)"
    },
    install_variables = {
       INSTALL_PREFIX = "$(LIBDIR)"
